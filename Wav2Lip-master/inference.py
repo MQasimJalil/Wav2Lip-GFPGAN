@@ -236,7 +236,7 @@ def main():
         raise ValueError('Mel contains nan! Using a TTS voice? Add a small epsilon noise to the wav file and try again')
 
     mel_chunks = []
-    mel_idx_multiplier = 80. / fps + 1
+    mel_idx_multiplier = 80. / (fps + 1)
     i = 0
     while 1:
         start_idx = int(i * mel_idx_multiplier)
